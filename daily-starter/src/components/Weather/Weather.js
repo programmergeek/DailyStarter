@@ -24,6 +24,10 @@ class Weather extends React.Component{
 
     }
 
+    update(){
+        setInterval(this.apiCall(this.state.city), 1000)
+    }
+
     render(){
         return(
             <div>
