@@ -11,10 +11,16 @@ class Weather extends React.Component{
         }
     }
 
+    componentDidMount(){
+        axios.get('http://api.weatherapi.com/v1/current.json?key=18dc0623507d4466ae7100225202308&q=Gaborone').then(res =>{
+            this.setState({data: res.data})
+        })
+    }
+
     render(){
         return(
             <div>
-
+                
             </div>
         )
     }
