@@ -20,7 +20,7 @@ class WeatherContainer extends React.Component{
         }
         this.apiCall = this.apiCall.bind(this)
     }
-
+//Data retrieval from API
     componentDidMount(){
         this.apiCall(this.state.city)
     }
