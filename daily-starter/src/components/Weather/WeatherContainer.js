@@ -11,7 +11,9 @@ class WeatherContainer extends React.Component{
                     
                 },
                 current:{
-
+                    temp_c: '',
+                    temp_f: '',
+                    condition: {}
                 }
             },
             city: 'Gaborone'
