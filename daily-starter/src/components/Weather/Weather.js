@@ -6,33 +6,6 @@ import axios from 'axios'
 class Weather extends React.Component{
     constructor(props){
         super(props)
-        this.state = {
-            data: {
-                location:{
-                    
-                },
-                current:{
-
-                }
-            },
-            city: 'Gaborone'
-        }
-    }
-
-    componentDidMount(){
-        this.apiCall(this.state.city)
-    }
-
-    apiCall(newCity){
-        //Method is called when a new city is chosen
-        axios.get(`http://api.weatherapi.com/v1/current.json?key=bd13e35f88e349ee8e773329202408=${newCity}`).then(res =>{
-            this.setState({data: res.data})
-        })
-
-    }
-
-    update(){
-        setInterval(this.apiCall(this.state.city), 1000)
     }
 
     render(){
