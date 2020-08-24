@@ -33,9 +33,6 @@ class WeatherContainer extends React.Component{
 
     }
 
-    update(){
-        this.apiCall(this.state.city)
-    }
 
     render(){
         return JSON.stringify(this.state.data.location.localtime)
