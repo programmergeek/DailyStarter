@@ -8,7 +8,7 @@ class WeatherContainer extends React.Component{
         this.state = {
             data: {
                 location:{
-                    
+                    localtime: ''
                 },
                 current:{
                     temp_c: '',
@@ -18,6 +18,7 @@ class WeatherContainer extends React.Component{
             },
             city: 'Gaborone'
         }
+        this.apiCall = this.apiCall.bind(this)
     }
 
     componentDidMount(){
@@ -26,14 +27,18 @@ class WeatherContainer extends React.Component{
 
     apiCall(newCity){
         //Method is called when a new city is chosen
-        axios.get(`http://api.weatherapi.com/v1/current.json?key=bd13e35f88e349ee8e773329202408=${newCity}`).then(res =>{
+        axios.get(`https://api.weatherapi.com/v1/current.json?key=bd13e35f88e349ee8e773329202408&q=${this.state.city}`).then(res =>{
             this.setState({data: res.data})
         })
 
     }
 
+    update(){
+        this.apiCall(this.state.city)
+    }
+
     render(){
-        return <Weather/>
+        return JSON.stringify(this.state.data.location.localtime)
     }
 }
 
