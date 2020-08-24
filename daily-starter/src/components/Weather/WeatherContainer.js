@@ -5,7 +5,6 @@ import Weather from './Weather'
 class WeatherContainer extends React.Component{
     constructor(props){
         super(props)
-        super(props)
         this.state = {
             data: {
                 location:{
