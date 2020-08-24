@@ -7,8 +7,15 @@ class Weather extends React.Component{
     constructor(props){
         super(props)
         this.state = {
-            data: {},
-            city: 'New York'
+            data: {
+                location:{
+                    
+                },
+                current:{
+
+                }
+            },
+            city: 'Gaborone'
         }
     }
 
