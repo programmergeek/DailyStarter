@@ -25,7 +25,7 @@ class Weather extends React.Component{
 
     apiCall(newCity){
         //Method is called when a new city is chosen
-        axios.get(`http://api.weatherapi.com/v1/current.json?key=18dc0623507d4466ae7100225202308&q=${newCity}`).then(res =>{
+        axios.get(`http://api.weatherapi.com/v1/current.json?key=bd13e35f88e349ee8e773329202408=${newCity}`).then(res =>{
             this.setState({data: res.data})
         })
 
