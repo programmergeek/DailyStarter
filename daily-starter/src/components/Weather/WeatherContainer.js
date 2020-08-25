@@ -44,7 +44,7 @@ class WeatherContainer extends React.Component{
 //render
     render(){
         this.update(this.state.city)
-        return <Weather currentData = {this.state.data.current}/>
+        return <Weather currentData = {this.state.data.current} city = {this.state.city}/>
     }
 }
 
