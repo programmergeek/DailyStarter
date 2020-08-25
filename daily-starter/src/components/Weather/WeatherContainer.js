@@ -33,9 +33,18 @@ class WeatherContainer extends React.Component{
 
     }
 
+//Update information 
 
+    update(city){
+        setInterval(() => {
+            this.apiCall(city)
+        }, 900000);
+    }
+
+//render
     render(){
-        return JSON.stringify(this.state.data.location.localtime)
+        this.update(this.state.city)
+        return this.state.data.current.temp_c
     }
 }
 
