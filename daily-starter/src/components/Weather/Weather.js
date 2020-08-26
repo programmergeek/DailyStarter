@@ -25,7 +25,8 @@ class Weather extends React.Component{
                 <h1> {this.props.city} <img src={this.props.currentData.condition.icon} 
                     width='80px'/>
                 </h1>
-                <h3> {this.props.currentData.condition.text} | {this.props.currentData.temp_c}<span>&#176;</span>C</h3>
+                <h3> {this.props.currentData.condition.text} | {this.state.useCelcius? this.props.currentData.temp_c:this.props.currentData.temp_f}
+                <span>&#176;</span>{this.state.useCelcius? 'C':'F'}</h3>
             </div>
         )
     }
