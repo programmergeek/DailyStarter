@@ -7,6 +7,16 @@ class Weather extends React.Component{
         this.state = {
             useCelcius: true,
         }
+        this.changeUnit = this.changeUnit.bind(this)
+    }
+
+    //Method called when button is clicked
+    changeUnit(){
+        if(this.state.useCelcius == true){
+            this.setState({useCelcius: false})
+        }else{
+            this.setState({useCelcius:true})
+        }
     }
 
     render(){
