@@ -4,6 +4,9 @@ import './Weather.css'
 class Weather extends React.Component{
     constructor(props){
         super(props)
+        this.state = {
+            useCelcius: true,
+        }
     }
 
     render(){
