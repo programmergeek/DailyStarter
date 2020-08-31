@@ -28,9 +28,10 @@ class Time extends React.Component{
     setTime(){
         //returns current time 
         var time = new Date()
-        var hour = time.getHours()
-        var minute = time.getMinutes()
-        var seconds = time.getSeconds()
+        var hour = time.getHours()<10 ? '0'+time.getHours():time.getHours()
+        var minute = time.getMinutes()<10 ? '0'+time.getMinutes():time.getMinutes()
+        var seconds = time.getSeconds()<10 ? '0'+time.getSeconds():time.getSeconds()
+        
         return ' '+hour+':'+minute+':'+seconds
     }
 
