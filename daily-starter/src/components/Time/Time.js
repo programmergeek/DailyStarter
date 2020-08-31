@@ -14,6 +14,7 @@ class Time extends React.Component{
             date: this.setDate(),
             time: this.setTime()
         })
+        this.update()
     }
 
     setDate(){
@@ -46,7 +47,6 @@ class Time extends React.Component{
     }
 
     render(){
-        this.update()
         return(
             <div>
                 {this.state.date}
