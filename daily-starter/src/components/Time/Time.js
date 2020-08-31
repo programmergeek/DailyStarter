@@ -21,8 +21,8 @@ class Time extends React.Component{
         var date = new Date()
         var year = date.getFullYear()
         var month = date.getMonth()
-        var day = date.getDay()
-        return year+'/ '+(month+1)+'/ '+day
+        var day = date.getDate()
+        return year+'/'+(month+1)+'/'+day
     }
 
     setTime(){
