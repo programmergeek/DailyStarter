@@ -9,9 +9,11 @@ class News extends React.Component{
                 news: {}
             }
         }
+        this.getData = this.getData.bind(this)
     }
 
     getData(){
+        //retrieves data from API
         axios.get('https://api.currentsapi.services/v1/latest-news?language=us&'+
         'apiKey=jXMOINjccFJR_ZPDQDp9vYxG9ONWf25asznwg52mt_2z1iCi').then(res => {
             this.setState({data: res.data})
