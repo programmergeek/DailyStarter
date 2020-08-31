@@ -34,7 +34,18 @@ class Time extends React.Component{
         return ' '+hour+':'+minute+':'+seconds
     }
 
+    update(){
+        setInterval(()=>{
+            var time = this.setTime()
+            this.setState({time: time})
+            if(time == '0:0:0'){
+                this.setState({date:this.setDate()})
+            }
+        }, 1000)
+    }
+
     render(){
+        this.update()
         return(
             <div>
                 {this.state.date}
