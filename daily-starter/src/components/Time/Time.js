@@ -18,6 +18,13 @@ class Time extends React.Component{
         return year+'/ '+(month+1)+'/ '+day
     }
 
+    setTime(){
+        //returns current time 
+        var time = new Date()
+        var currentTime = time.getTime()
+        return currentTime+''
+    }
+
     render(){
         return(
             <div>
