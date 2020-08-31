@@ -6,7 +6,7 @@ class News extends React.Component{
         super(props)
         this.state = {
             data : {
-                news: {}
+                
             }
         }
         this.getData = this.getData.bind(this)
@@ -18,8 +18,7 @@ class News extends React.Component{
 
     getData(){
         //retrieves data from API
-        axios.get('https://api.currentsapi.services/v1/latest-news?language=us&'+
-        'apiKey=jXMOINjccFJR_ZPDQDp9vYxG9ONWf25asznwg52mt_2z1iCi').then(res => {
+        axios.get('https://newsapi.org/v2/top-headlines?country=us&apiKey=ee017bdc09d942d8a9810c1e788f15b3').then(res => {
             this.setState({data: res.data})
         }).catch(error =>{
             return <h1>Could not get news reports.</h1>
@@ -30,7 +29,7 @@ class News extends React.Component{
     render(){
         return(
             <div>
-
+                {JSON.stringify(this.state.data)}
             </div>
         )
     }
