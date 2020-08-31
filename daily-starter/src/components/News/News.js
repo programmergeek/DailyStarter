@@ -4,6 +4,11 @@ import axios from 'axios'
 class News extends React.Component{
     constructor(props){
         super(props)
+        this.state = {
+            data : {
+                news: {}
+            }
+        }
     }
 
     render(){
