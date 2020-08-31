@@ -9,6 +9,13 @@ class Time extends React.Component{
         }
     }
 
+    componentDidMount(){
+        this.setState({
+            date: this.setDate(),
+            time: this.setTime()
+        })
+    }
+
     setDate(){
         //returns a formated string for the date
         var date = new Date()
