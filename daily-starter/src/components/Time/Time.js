@@ -28,14 +28,17 @@ class Time extends React.Component{
     setTime(){
         //returns current time 
         var time = new Date()
-        var currentTime = time.getTime()
-        return currentTime+''
+        var hour = time.getHours()
+        var minute = time.getMinutes()
+        var seconds = time.getSeconds()
+        return ' '+hour+':'+minute+':'+seconds
     }
 
     render(){
         return(
             <div>
-
+                {this.state.date}
+                {this.state.time}
             </div>
         )
     }

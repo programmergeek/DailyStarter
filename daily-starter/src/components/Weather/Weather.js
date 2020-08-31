@@ -1,5 +1,6 @@
 import React from 'react'
 import './Weather.css'
+import Time from '../Time/Time'
 
 class Weather extends React.Component{
     constructor(props){
@@ -27,6 +28,7 @@ class Weather extends React.Component{
                 </h1>
                 <h3> {this.props.currentData.condition.text} | {this.state.useCelcius? this.props.currentData.temp_c:this.props.currentData.temp_f}
                 <span>&#176;</span>{this.state.useCelcius? 'C':'F'}</h3>
+                <Time/>
                 <button onClick={this.changeUnit}>Change unit</button>
             </div>
         )
