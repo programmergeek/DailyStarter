@@ -11,6 +11,16 @@ class News extends React.Component{
         }
     }
 
+    getData(){
+        axios.get('https://api.currentsapi.services/v1/latest-news?language=us&'+
+        'apiKey=jXMOINjccFJR_ZPDQDp9vYxG9ONWf25asznwg52mt_2z1iCi').then(res => {
+            this.setState({data: res.data})
+        }).catch(error =>{
+            return <h1>Could not get news reports.</h1>
+        }
+        )
+    }
+
     render(){
         return(
             <div>
