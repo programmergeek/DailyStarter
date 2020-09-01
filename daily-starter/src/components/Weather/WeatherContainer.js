@@ -1,6 +1,7 @@
 import React from 'react'
 import Weather from './Weather'
 import axios from 'axios'
+import CityInput from '../Input/CityInput'
 
 class WeatherContainer extends React.Component{
     constructor(props){
@@ -52,7 +53,10 @@ class WeatherContainer extends React.Component{
 //render
     render(){
         this.update(this.state.city)
-        return <Weather currentData = {this.state.data.current} city = {this.state.city}/>
+        return (<div>
+            <CityInput updateCity={this.updateCity()} callAPI={this.apiCall()}/>
+            <Weather currentData = {this.state.data.current} city = {this.state.city}/>
+        </div>)
     }
 }
 
