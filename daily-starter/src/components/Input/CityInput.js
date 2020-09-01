@@ -17,7 +17,8 @@ class CityInput extends React.Component{
     render(){
         return(
             <div>
-
+                <input className="inputBar" type="text" onChange={this.handleChange()}/>
+                <button className="submit" onClick={this.props.callAPI()}>Submit</button>
             </div>
         )
     }
