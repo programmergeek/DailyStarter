@@ -6,7 +6,7 @@ class News extends React.Component{
         super(props)
         this.state = {
             data : {
-                
+                articles: []
             }
         }
         this.getData = this.getData.bind(this)
