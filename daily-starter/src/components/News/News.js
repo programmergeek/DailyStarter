@@ -11,7 +11,7 @@ class News extends React.Component{
                         source: {},
                         author: '',
                         title: '',
-                        descripion: '',
+                        description: '',
                         url: '',
                         urlToImage: ''
 
@@ -20,7 +20,7 @@ class News extends React.Component{
                         source: {},
                         author: '',
                         title: '',
-                        descripion: '',
+                        description: '',
                         url: '',
                         urlToImage: ''
 
@@ -29,7 +29,7 @@ class News extends React.Component{
                         source: {},
                         author: '',
                         title: '',
-                        descripion: '',
+                        description: '',
                         url: '',
                         urlToImage: ''
 
@@ -38,7 +38,7 @@ class News extends React.Component{
                         source: {},
                         author: '',
                         title: '',
-                        descripion: '',
+                        description: '',
                         url: '',
                         urlToImage: ''
 
@@ -47,7 +47,7 @@ class News extends React.Component{
                         source: {},
                         author: '',
                         title: '',
-                        descripion: '',
+                        description: '',
                         url: '',
                         urlToImage: ''
 
@@ -84,9 +84,9 @@ class News extends React.Component{
                     <h3 className="Headline"> {this.state.data.articles[x].title} </h3>
                     <h5 className="author"> {this.state.data.articles[x].author} </h5>
                     <br/>
-                    <p className="description" > {this.state.data.articles[x].descripion} </p>
+                    <p className="description" > {this.state.data.articles[x].description} </p>
                     <a href={this.state.data.articles[x].url}>Source</a>
-                    <br/>
+                    
                 </div>
             )
             console.log(list)
