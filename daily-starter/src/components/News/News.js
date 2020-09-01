@@ -6,7 +6,53 @@ class News extends React.Component{
         super(props)
         this.state = {
             data : {
-                articles: []
+                articles: [
+                    {
+                        source: {},
+                        author: '',
+                        title: '',
+                        descripion: '',
+                        url: '',
+                        urlToImage: ''
+
+                    },
+                    {
+                        source: {},
+                        author: '',
+                        title: '',
+                        descripion: '',
+                        url: '',
+                        urlToImage: ''
+
+                    },
+                    {
+                        source: {},
+                        author: '',
+                        title: '',
+                        descripion: '',
+                        url: '',
+                        urlToImage: ''
+
+                    },
+                    {
+                        source: {},
+                        author: '',
+                        title: '',
+                        descripion: '',
+                        url: '',
+                        urlToImage: ''
+
+                    },
+                    {
+                        source: {},
+                        author: '',
+                        title: '',
+                        descripion: '',
+                        url: '',
+                        urlToImage: ''
+
+                    }
+                ]
             }
         }
         this.getData = this.getData.bind(this)
@@ -26,10 +72,19 @@ class News extends React.Component{
         )
     }
 
+    list(){
+        var list = []
+        for (var x = 0; x < 5; x++){
+            list.push(<h3>{this.state.data.articles[x].title}</h3>)
+            console.log(list)
+        }
+        return list
+    }
+
     render(){
         return(
             <div>
-                {JSON.stringify(this.state.data)}
+                {this.list()}
             </div>
         )
     }
