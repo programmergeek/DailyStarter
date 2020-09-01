@@ -27,7 +27,7 @@ class WeatherContainer extends React.Component{
 
     apiCall(newCity){
         //Method is called when a new city is chosen
-        axios.get(`https://api.weatherapi.com/v1/current.json?key=bd13e35f88e349ee8e773329202408&q=${this.state.city}`).then(res =>{
+        axios.get(`https://api.weatherapi.com/v1/current.json?key=bd13e35f88e349ee8e773329202408&q=${newCity}`).then(res =>{
             this.setState({data: res.data})
         })
 
@@ -39,6 +39,14 @@ class WeatherContainer extends React.Component{
         setInterval(() => {
             this.apiCall(city)
         }, 900000);
+    }
+
+//update state 'city'
+
+    updateCity(newCity){
+        this.setState({
+            city: newCity
+        })
     }
 
 //render
