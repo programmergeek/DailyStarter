@@ -75,7 +75,20 @@ class News extends React.Component{
     list(){
         var list = []
         for (var x = 0; x < 5; x++){
-            list.push(<h3>{this.state.data.articles[x].title}</h3>)
+            list.push(
+                <div>
+                    <img src={this.state.data.articles[x].urlToImage} style={{
+                        width: 150,
+                        height: 100
+                    }} alt="image"/>
+                    <h3 className="Headline"> {this.state.data.articles[x].title} </h3>
+                    <h5 className="author"> {this.state.data.articles[x].author} </h5>
+                    <br/>
+                    <p className="description" > {this.state.data.articles[x].descripion} </p>
+                    <a href={this.state.data.articles[x].url}>Source</a>
+                    <br/>
+                </div>
+            )
             console.log(list)
         }
         return list
