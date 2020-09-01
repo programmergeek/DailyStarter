@@ -8,6 +8,12 @@ class CityInput extends React.Component{
         }
     }
 
+
+    //updates value of state city when a change occurs in the input field
+    handleChange(event){
+        this.props.updateCity(event.target.value)
+    }
+
     render(){
         return(
             <div>
