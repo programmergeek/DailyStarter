@@ -62,7 +62,7 @@ class WeatherContainer extends React.Component{
     }
 
     onSubmit(){
-        this.updateCity(this.state.temp)
+        this.updateCity(this.state.temp.toLocaleUpperCase())
         this.apiCall(this.state.temp)
     }
 
