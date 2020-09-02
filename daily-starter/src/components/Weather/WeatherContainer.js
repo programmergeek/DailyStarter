@@ -8,7 +8,7 @@ class WeatherContainer extends React.Component{
         this.state = {
             data: {
                 location:{
-                    localtime: ''
+                    name: ''
                 },
                 current:{
                     temp_c: '',
