@@ -71,7 +71,6 @@ class WeatherContainer extends React.Component{
                 <input onChange = {this.handleChange} type="text" value={this.state.temp} />
                 <button onClick={this.onSubmit}> Submit </button>
             </div>
-            <CityInput updateCity={this.updateCity()} callAPI={this.apiCall()}/>
             <Weather currentData = {this.state.data.current} city = {this.state.city}/>
         </div>
         )
