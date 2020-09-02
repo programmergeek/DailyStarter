@@ -17,7 +17,8 @@ class WeatherContainer extends React.Component{
                     condition: {}
                 }
             },
-            city: 'Gaborone'
+            city: 'Gaborone',
+            temp: ''
         }
         this.apiCall = this.apiCall.bind(this)
     }
