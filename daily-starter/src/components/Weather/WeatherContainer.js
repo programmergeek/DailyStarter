@@ -35,6 +35,10 @@ class WeatherContainer extends React.Component{
         //Method is called when a new city is chosen
         axios.get(`https://api.weatherapi.com/v1/current.json?key=bd13e35f88e349ee8e773329202408&q=${newCity}`).then(res =>{
             this.setState({data: res.data})
+        }).catch(error => {
+            this.setState({
+                apiError: true
+            })
         })
 
     }
