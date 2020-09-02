@@ -51,6 +51,13 @@ class WeatherContainer extends React.Component{
         })
     }
 
+    //updates state temp when input is entered in text field
+    handleChange(event){
+        this.setState({
+            temp: event.target.value
+        })
+    }
+
 //render
     render(){
         this.update(this.state.city)
