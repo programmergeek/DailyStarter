@@ -71,6 +71,14 @@ class WeatherContainer extends React.Component{
         this.apiCall(this.state.temp)
     }
 
+    display(){
+        if (this.state.apiError == false){
+            return <Weather currentData = {this.state.data.current} city = {this.state.city}/>
+        }else{
+            return <h1>Oops, there seems to be a problem. Double check your spelling.</h1>
+        }
+    }
+
 //render
     render(){
         this.update(this.state.city)
@@ -80,7 +88,7 @@ class WeatherContainer extends React.Component{
                 <input onChange = {this.handleChange} type="text" value={this.state.temp} />
                 <button onClick={this.onSubmit}> Submit </button>
             </div>
-            <Weather currentData = {this.state.data.current} city = {this.state.city}/>
+            {this.display()}
         </div>
         )
     }
