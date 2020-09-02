@@ -20,6 +20,10 @@ class WeatherContainer extends React.Component{
             temp: ''
         }
         this.apiCall = this.apiCall.bind(this)
+        this.updateCity = this.updateCity.bind(this)
+        this.handleChange = this.handleChange.bind(this)
+        this.update = this.update.bind(this)
+        this.onSubmit = this.onSubmit.bind(this)
     }
 //Data retrieval from API
     componentDidMount(){
