@@ -63,7 +63,7 @@ class WeatherContainer extends React.Component{
 
     onSubmit(){
         this.updateCity(this.state.temp)
-        this.apiCall(this.state.city)
+        this.apiCall(this.state.temp)
     }
 
 //render
