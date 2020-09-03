@@ -96,7 +96,7 @@ class WeatherContainer extends React.Component{
         return (
         <div className="w-container">
             <div className="input-container">
-                <input onChange = {this.handleChange} type="text" value={this.state.temp} />
+                <input onChange = {this.handleChange} type="text" placeholder="Search for city" value={this.state.temp} />
                 <button onClick={this.onSubmit}><img src={Icon}/></button>
             </div>
             {this.display()}
