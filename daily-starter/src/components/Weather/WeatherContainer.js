@@ -2,6 +2,7 @@ import React from 'react'
 import Weather from './Weather'
 import axios from 'axios'
 import './Weather.css'
+import Icon from './magnifying-glass.svg'
 
 class WeatherContainer extends React.Component{
     constructor(props){
@@ -96,7 +97,7 @@ class WeatherContainer extends React.Component{
         <div className="w-container">
             <div className="input-container">
                 <input onChange = {this.handleChange} type="text" value={this.state.temp} />
-                <button onClick={this.onSubmit}> Submit </button>
+                <button onClick={this.onSubmit}><img src={Icon}/></button>
             </div>
             {this.display()}
         </div>
