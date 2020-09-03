@@ -21,6 +21,18 @@
     width: 40%;
 }
 
+.w-container{
+    border: 1px solid black;
+}
+
+.input-container{
+    border: 1px solid black;
+}
+
+.weather{
+    border: 1px solid black;
+}
+
 @media only screen and (min-width: 600px){
     .input-container input{
         width: 20%;
