@@ -36,7 +36,6 @@ background-color: #f5f5f5;
 }
 
 .w-container{
-    border: 1px solid black;
     display: flex;
     flex-direction: column;
     background-color: white;
@@ -54,11 +53,11 @@ background-color: #f5f5f5;
 }
 
 .input-container{
-    border: 1px solid black;
+    
 }
 
 .weather{
-    border: 1px solid black;
+
 }
 
 @media only screen and (min-width: 600px){
