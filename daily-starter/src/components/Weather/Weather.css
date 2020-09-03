@@ -12,3 +12,9 @@
     border-radius: 20px 20px;
     border-style: solid;
 }
+
+.input-container input{
+    border: 1px;
+    border-radius: 15px;
+    border-style: solid;
+}
