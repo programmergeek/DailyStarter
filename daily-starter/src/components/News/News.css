@@ -2,3 +2,7 @@
     width: 25.5rem;
     margin: 5%;
 }
+
+.contain{
+    display: flex;
+}
