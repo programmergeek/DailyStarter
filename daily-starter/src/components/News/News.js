@@ -78,7 +78,7 @@ class News extends React.Component{
         for (var x = 0; x < 5; x++){
             list.push(
                 <div className="cards">
-                    <div class="card text-left" style={{height:'36rem'}}>
+                    <div class="card text-left" style={{height:'40rem'}}>
                       <img class="card-img-top" src={this.state.data.articles[x].urlToImage} alt="image"/>
                       <div class="card-body">
                         <h4 class="card-title"> {this.state.data.articles[x].title} </h4>
