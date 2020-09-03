@@ -85,8 +85,8 @@ class WeatherContainer extends React.Component{
     render(){
         this.update(this.state.city)
         return (
-        <div>
-            <div>
+        <div className="w-container">
+            <div className="input-container">
                 <input onChange = {this.handleChange} type="text" value={this.state.temp} />
                 <button onClick={this.onSubmit}> Submit </button>
             </div>
