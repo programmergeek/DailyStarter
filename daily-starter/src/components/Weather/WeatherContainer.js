@@ -1,7 +1,6 @@
 import React from 'react'
 import Weather from './Weather'
 import axios from 'axios'
-import 'Weather.css'
 
 class WeatherContainer extends React.Component{
     constructor(props){
