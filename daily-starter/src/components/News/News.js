@@ -1,5 +1,6 @@
 import React from 'react'
 import axios from 'axios'
+import './News.css'
 
 class News extends React.Component{
     constructor(props){
