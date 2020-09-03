@@ -1,4 +1,4 @@
-#Daily Starter
+# Daily Starter
 
 This is a react app that retrives and displays data from a news and weather apis.
 
