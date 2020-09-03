@@ -1,6 +1,8 @@
 import React from 'react'
 import Weather from './Weather'
 import axios from 'axios'
+import './Weather.css'
+import Icon from './magnifying-glass.svg'
 
 class WeatherContainer extends React.Component{
     constructor(props){
@@ -43,7 +45,7 @@ class WeatherContainer extends React.Component{
 
     }
 
-//Update information 
+//Update information
 
     update(city){
         setInterval(() => {
@@ -74,9 +76,17 @@ class WeatherContainer extends React.Component{
 
     display(){
         if (this.state.apiError == false){
-            return <Weather currentData = {this.state.data.current} city = {this.state.data.location.name}/>
+            return (
+                <div className="weather">
+                    <Weather currentData = {this.state.data.current} city = {this.state.data.location.name}/>
+                </div>
+            )
         }else{
-            return <h1>Oops, there seems to be a problem. Double check your spelling.</h1>
+            return (
+                <div className="error">
+                    <h1>Oops, there seems to be a problem. Double check your spelling.</h1>
+                </div>
+            )
         }
     }
 
@@ -84,10 +94,10 @@ class WeatherContainer extends React.Component{
     render(){
         this.update(this.state.city)
         return (
-        <div>
-            <div>
-                <input onChange = {this.handleChange} type="text" value={this.state.temp} />
-                <button onClick={this.onSubmit}> Submit </button>
+        <div className="w-container">
+            <div className="input-container">
+                <input onChange = {this.handleChange} type="text" placeholder="Search for city" value={this.state.temp} />
+                <button onClick={this.onSubmit}><img src={Icon}/></button>
             </div>
             {this.display()}
         </div>

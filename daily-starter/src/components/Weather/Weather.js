@@ -29,7 +29,7 @@ class Weather extends React.Component{
                 <h3> {this.props.currentData.condition.text} | {this.state.useCelcius? this.props.currentData.temp_c:this.props.currentData.temp_f}
                 <span>&#176;</span>{this.state.useCelcius? 'C':'F'}</h3>
                 <Time/>
-                <button onClick={this.changeUnit}>Change unit</button>
+                <button onClick={this.changeUnit} className="change-unit">Change to {this.state.useCelcius? 'fahrenheit':'Celsius'} </button>
             </div>
         )
     }

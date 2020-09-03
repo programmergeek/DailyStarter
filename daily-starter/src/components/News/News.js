@@ -1,5 +1,6 @@
 import React from 'react'
 import axios from 'axios'
+import './News.css'
 
 class News extends React.Component{
     constructor(props){
@@ -76,16 +77,16 @@ class News extends React.Component{
         var list = []
         for (var x = 0; x < 5; x++){
             list.push(
-                <div>
-                    <img src={this.state.data.articles[x].urlToImage} style={{
-                        width: 150,
-                        height: 100
-                    }} alt="image"/>
-                    <h3 className="Headline"> {this.state.data.articles[x].title} </h3>
-                    <h5 className="author"> {this.state.data.articles[x].author} </h5>
-                    <p className="description" > {this.state.data.articles[x].description} </p>
-                    <a href={this.state.data.articles[x].url}>Source</a>
-                    
+                <div className="cards">
+                    <div class="card text-left" style={{height:'40rem'}}>
+                      <img class="card-img-top" src={this.state.data.articles[x].urlToImage} alt="image"/>
+                      <div class="card-body">
+                        <h4 class="card-title"> {this.state.data.articles[x].title} </h4>
+                        <h6 class="card-subtitle mb-2 text-muted"> {this.state.data.articles[x].author} | {this.state.data.articles[x].source.name} </h6>
+                        <p class="card-text"> {this.state.data.articles[x].description} </p>
+                        <a href={this.state.data.articles[x].url} class="card-link"> Source </a>
+                      </div>
+                    </div>
                 </div>
             )
             console.log(list)
@@ -95,7 +96,7 @@ class News extends React.Component{
 
     render(){
         return(
-            <div>
+            <div className="contain">
                 {this.list()}
             </div>
         )
