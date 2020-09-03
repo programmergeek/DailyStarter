@@ -75,9 +75,17 @@ class WeatherContainer extends React.Component{
 
     display(){
         if (this.state.apiError == false){
-            return <Weather currentData = {this.state.data.current} city = {this.state.data.location.name}/>
+            return (
+                <div className="weather">
+                    <Weather currentData = {this.state.data.current} city = {this.state.data.location.name}/>
+                </div>
+            )
         }else{
-            return <h1>Oops, there seems to be a problem. Double check your spelling.</h1>
+            return (
+                <div className="error">
+                    <h1>Oops, there seems to be a problem. Double check your spelling.</h1>
+                </div>
+            )
         }
     }
 
